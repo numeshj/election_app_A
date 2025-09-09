@@ -101,7 +101,7 @@
 }
 
 .tight-table thead th {
-    background: linear-gradient(#1b2229, #222b33, #1f6feb) #6d7680 !important;
+    background: linear-gradient(#1b2229, #222b33, #1f6feb) !important;
     padding: 8px 10px;
     font-weight: 600;
     font-size: 11px;
