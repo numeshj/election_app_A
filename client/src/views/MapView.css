@@ -1,0 +1,10 @@
+/* MapView specific styles */
+.MapView-root {
+    /* map view wrapper */
+    min-height: 0;
+}
+
+.MapView-hint {
+    font-size: 12px;
+    opacity: .7;
+}

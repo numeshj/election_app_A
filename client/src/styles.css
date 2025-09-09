@@ -1,0 +1,270 @@
+/* Global resets */
+body,
+html,
+#root {
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= Client App Specific ================= */
+.client-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+.client-main {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+}
+
+/* Navigation styles */
+.nav-header {
+    padding: 18px 18px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.nav-section-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: .6;
+    padding: 12px 18px 4px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 6px 0 10px;
+    margin: 0;
+    flex: 1;
+}
+
+.nav-link {
+    margin: 2px 10px;
+}
+
+.nav-link a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background .15s, color .15s;
+}
+
+.nav-link a:hover {
+    background: #21262d;
+    color: #fff;
+}
+
+.nav-link a.active {
+    background: #238636;
+    color: #fff;
+    box-shadow: 0 0 0 1px #2ea043 inset, 0 0 0 1px #2ea043;
+}
+
+.nav-footer {
+    padding: 14px 16px 18px;
+    font-size: 12px;
+    opacity: .55;
+}
+
+/* View shell */
+.view-shell {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Panel heading */
+.panel-heading {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+/* Clickable elements */
+.clickable {
+    cursor: pointer;
+}
+
+/* List rows */
+.list-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 2px 0;
+}
+
+/* Party swatches */
+.party-swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px #0006 inset;
+}
+
+.party-swatch.sm {
+    width: 10px;
+    height: 10px;
+}
+
+/* Monospace font */
+.mono {
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+
+/* Scroll box */
+.scroll-box {
+    overflow: auto;
+}
+
+.h200 {
+    max-height: 200px;
+}
+
+/* Tables */
+.dim {
+    opacity: .6;
+}
+
+.status-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    border-radius: 14px;
+    background: #222b33;
+    border: 1px solid #2a3039;
+}
+
+.status-chip.complete {
+    background: #238636;
+    border-color: #2ea043;
+    color: #fff;
+}
+
+.status-chip.partial {
+    background: #7a5212;
+    border-color: #8b6a1b;
+    color: #fff;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    background: #888;
+    opacity: .25;
+}
+
+.legend-swatch.partial {
+    background: #1f6feb;
+    opacity: .6;
+}
+
+.legend-swatch.full {
+    background: #1f6feb;
+    opacity: 1;
+}
+
+/* Utility classes */
+.separator {
+    flex: 1;
+    height: 1px;
+    background: #30363d;
+    margin: 0 6px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.muted {
+    opacity: .6;
+}
+
+.inline-code {
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    background: #1a2128;
+    padding: 2px 6px;
+    border: 1px solid #2d333b;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* Animations */
+@keyframes pulseBorder {
+    0% {
+        box-shadow: 0 0 0 0 rgba(46, 160, 67, .4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(46, 160, 67, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(46, 160, 67, 0);
+    }
+}
+
+.pulse {
+    animation: pulseBorder 2.4s infinite;
+}
+
+/* Responsive tweaks */
+@media (max-width:900px) {
+    .nav {
+        width: 200px;
+    }
+}
+
+@media (max-width:700px) {
+    .nav {
+        position: fixed;
+        left: -230px;
+        top: 0;
+        bottom: 0;
+        z-index: 300;
+        transition: left .3s;
+    }
+
+    .nav.open {
+        left: 0;
+    }
+
+    .topbar {
+        padding-left: 60px;
+    }
+}

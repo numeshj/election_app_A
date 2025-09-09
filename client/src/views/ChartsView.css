@@ -1,0 +1,3 @@
+/* ChartsView specific styles */
+.ChartsView-root { /* container inherits generic .view-shell spacing */ min-height:0; }
+.ChartsView-gridAlt { display:grid; gap:20px; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); }

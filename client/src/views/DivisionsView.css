@@ -1,0 +1,38 @@
+/* DivisionsView specific styles */
+.DivisionsView-root { /* divisions list container */ min-height:0; }
+
+/* Table styles for DivisionsView */
+.tight-table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.tight-table thead th {
+    background: #1d2329;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom: 1px solid #2a3039;
+}
+
+.tight-table tbody tr {
+    border-bottom: 1px solid #2a3039;
+}
+
+.tight-table tbody tr.row-link {
+    cursor: pointer;
+}
+
+.tight-table tbody tr.row-link:hover td {
+    background: #1b2229;
+}
+
+.tight-table td {
+    padding: 6px 10px;
+}

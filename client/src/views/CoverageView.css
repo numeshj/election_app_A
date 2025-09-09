@@ -1,0 +1,5 @@
+/* CoverageView specific styles */
+.CoverageView-root { /* coverage view container */ min-height:0; }
+.CoverageView-progressBar { margin:10px 0 16px; height:10px; background:#161a21; border-radius:6px; overflow:hidden; border:1px solid #2a3039; }
+.CoverageView-progressBar > div { background:#1f6feb; height:100%; transition:width .4s ease; }
+.CoverageView-coverageText { font-size:13px; }

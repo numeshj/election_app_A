@@ -1,0 +1,156 @@
+/* DetailOverlay component styles */
+
+/* Overlay (lite) */
+.overlay-lite {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 80;
+}
+
+.overlay-content-box {
+    width: min(960px, 92%);
+    max-height: 88vh;
+    overflow: auto;
+    background: #1f242c;
+    border: 1px solid #2a3039;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.overlay-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.overlay-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-close {
+    background: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.btn-close:hover {
+    background: #3d3d3d;
+}
+
+.overlay-meta {
+    margin: 4px 0 12px;
+    font-size: 12px;
+    opacity: .75;
+}
+
+.overlay-summary {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.summary-block {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.plain-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.totals-line {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.top-party {
+    font-size: 12px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.subheading {
+    margin: 18px 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tight-table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.tight-table thead th {
+    background: linear-gradient(#1b2229, #222b33, #1f6feb) #6d7680 !important;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom: 1px solid #2a3039;
+}
+
+.tight-table tbody tr {
+    border-bottom: 1px solid #2a3039;
+}
+
+.tight-table tbody tr.row-link {
+    cursor: pointer;
+}
+
+.tight-table tbody tr.row-link:hover td {
+    background: #1b2229;
+}
+
+.tight-table td {
+    padding: 6px 10px;
+}
+
+.divisions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.division-chip {
+    padding: 4px 8px;
+    border: 1px solid #2a3039;
+    border-radius: 14px;
+    background: #222b33;
+    opacity: .5;
+}
+
+.division-chip.reported {
+    background: #1f6feb;
+    opacity: 1;
+}
+
+.pending-note {
+    font-size: 11px;
+    opacity: .6;
+    margin-top: 6px;
+}

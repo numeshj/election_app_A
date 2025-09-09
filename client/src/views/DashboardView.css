@@ -1,0 +1,88 @@
+/* DashboardView specific styles */
+.DashboardView-split {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+}
+
+.DashboardView-left {
+    flex: 3;
+    position: relative;
+    padding: 20px;
+    overflow: auto;
+}
+
+.DashboardView-right {
+    flex: 2;
+    background: #161a21;
+    padding: 16px;
+    overflow: auto;
+    border-left: 1px solid #2a3039;
+}
+
+.DashboardView-pageTitle {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.DashboardView-sectionTitle {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.DashboardView-cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+@media (max-width:1200px) {
+    .DashboardView-split {
+        flex-direction: column;
+    }
+
+    .DashboardView-right {
+        border-left: none;
+        border-top: 1px solid #2a3039;
+    }
+}
+
+/* Table styles for DashboardView */
+.tight-table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.tight-table thead th {
+    background: #1d2329;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom: 1px solid #2a3039;
+}
+
+.tight-table tbody tr {
+    border-bottom: 1px solid #2a3039;
+}
+
+.tight-table tbody tr.row-link {
+    cursor: pointer;
+}
+
+.tight-table tbody tr.row-link:hover td {
+    background: #1b2229;
+}
+
+.tight-table td {
+    padding: 6px 10px;
+}
