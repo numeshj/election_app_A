@@ -1,4 +1,12 @@
 {
+  "name": "server",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "NODE_ENV=production node src/server.js"
+  },
   "dependencies": {
     "ws": "^8.18.3"
   }
