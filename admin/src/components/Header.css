@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.top-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #555;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+.btn.ghost {
+  background: none;
+  border: 1px solid #555;
+}
+
+.btn.ghost:hover {
+  background: #555;
+}

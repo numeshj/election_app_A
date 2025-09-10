@@ -15,9 +15,9 @@ export default function App() {
   const [currentView, setCurrentView] = useState('entry');
   const [results, setResults] = useState([]);
   const [districts, setDistricts] = useState([]);
-  const [selectedResult, setSelectedResult] = useState(null)
+  const [selectedResult, setSelectedResult] = useState(null);
 
-  // load data when start
+  // Load data when app starts
   useEffect(() => {
     loadData();
     connectToServer();
@@ -32,7 +32,7 @@ export default function App() {
       setResults(resultsRes.data);
       setDistricts(districtsRes.data);
     } catch (error) {
-      console.error('Error loading data: ', error);
+      console.error('Error loading data:', error);
     }
   };
 
@@ -44,13 +44,13 @@ export default function App() {
     });
   };
 
-  const handleResultSubmit = async (resultsData) => {
+  const handleResultSubmit = async (resultData) => {
     try {
-      await axios.post(`${API_BASE}/api/results`, resultsData);
+      await axios.post(`${API_BASE}/api/results`, resultData);
       alert('Result saved successfully!');
     } catch (error) {
-      console.log('Error saving result: ', error);
-      alert('Error Saving Result');
+      console.error('Error saving result:', error);
+      alert('Error saving result');
     }
   };
 
@@ -72,7 +72,7 @@ export default function App() {
       <Header currentView={currentView} onViewChange={setCurrentView} />
 
       <main className="main-content">
-        {renderCurrentView}
+        {renderCurrentView()}
       </main>
 
       <Footer />
@@ -86,4 +86,3 @@ export default function App() {
     </div>
   );
 }
-

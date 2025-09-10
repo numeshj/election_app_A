@@ -1,0 +1,85 @@
+.MapComp-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.MapComp-shell.large {
+  padding: 2rem;
+}
+
+.MapComp-svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #2a2a2a;
+}
+
+.MapComp-district {
+  stroke: #666;
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.MapComp-district:hover {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.MapComp-district.outline {
+  fill: #333;
+  fill-opacity: 0.3;
+}
+
+.MapComp-district.has-data:hover {
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+.MapComp-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #2a2a2a;
+  border-radius: 4px;
+  border: 1px solid #444;
+}
+
+.MapComp-legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.MapComp-legendSwatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #555;
+}
+
+.MapComp-legendSwatch.none {
+  background: #333;
+  opacity: 0.3;
+}
+
+.MapComp-legendSwatch.partial {
+  background: #888;
+  opacity: 0.7;
+}
+
+.MapComp-legendSwatch.full {
+  background: #888;
+  opacity: 1;
+}
