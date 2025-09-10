@@ -17,9 +17,9 @@ function HistoryView({ results, onSelectResult }) {
         </div>
       ) : (
         <div className="results-list">
-          {sortedResults.map(result => (
+          {sortedResults.map((result, index) => (
             <div
-              key={result.id}
+              key={result.id || `${result.sequence_number}-${index}`}
               className="result-item"
               onClick={() => onSelectResult(result)}
             >

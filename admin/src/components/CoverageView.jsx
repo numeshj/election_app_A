@@ -21,7 +21,7 @@ function CoverageView({ results, districts, onSelectResult }) {
     // Initialize districts
     districts.forEach(district => {
       districtMap.set(district.id, {
-        name: district.name,
+        name: district.name.en,
         totalDivisions: district.divisions?.length || 0,
         reportedDivisions: new Set()
       });
@@ -170,7 +170,7 @@ function CoverageView({ results, districts, onSelectResult }) {
               }}
               onClick={() => winner && onSelectResult(winner.result)}
             >
-              <div className="district-name">{district.name}</div>
+              <div className="district-name">{district.name.en}</div>
               <div className="district-stats">
                 <div className="completion">
                   {district.reportedDivisions}/{district.totalDivisions} divisions

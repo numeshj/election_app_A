@@ -1,7 +1,20 @@
 import React from 'react';
 import './Header.css';
 
-function Header({ currentView, onViewChange }) {
+function Header({ currentView, onViewChange, onImport }) {
+  const handleImportClick = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.multiple = true; // Allow multiple files
+    input.onchange = (event) => {
+      if (onImport) {
+        onImport(event.target.files);
+      }
+    };
+    input.click();
+  };
+
   const tabs = [
     { key: 'entry', label: 'Enter Result' },
     { key: 'history', label: 'History' },
@@ -23,7 +36,7 @@ function Header({ currentView, onViewChange }) {
         ))}
       </nav>
       <nav className="top-actions">
-        <button className="btn ghost">Import JSON</button>
+        <button className="btn ghost" onClick={handleImportClick}>Import JSON Files</button>
       </nav>
     </header>
   );

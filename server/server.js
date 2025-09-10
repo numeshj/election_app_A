@@ -33,9 +33,9 @@ wss.on("connection", (ws) => {
   ws.on("message", (data) => {
     console.log("Received a New Result from admin: " + data);
     const message = JSON.parse(data.toString());
-    if (message.type === "result") {
-      results.push(message.data);
-      broadcast({ type: "result:new", data: message.data });
+    if (message.type === "submit") {
+      results.push(message.payload);
+      broadcast({ type: "result:new", data: message.payload });
     }
   });
 
